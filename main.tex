@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2.54cm,bottom=2.54cm,left=2.54cm,right=2.54cm,marginparwidth=1.75cm]{geometry}
+
+%% custom packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{tikz-cd}
+\usepackage{parskip}
+
+%%special commands
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\invisiblesection}[1]{%
+	\markright{#1}}
+\newsavebox\tempbox
+\newlength\templen
+
+%%paragraph setup
+%\setlength{\parskip}{1em}
+
+\title{%
+ Investor Sentiment and Stock Returns: \\
+Wisdom of the Crowds }
+
+\author{Linus Kinzel, Andrei Pauliuc and Imrich Valach}
+
+\begin{document}
+\maketitle
+
+\vspace{30mm}
+\begin{abstract}
+\noindent Building on previous studies which prove that stock returns are influenced by investor sentiment, many authors have tried quantifying this relationship by employing traditional sentiment measures such as questionnaires and sentiment proxies. Although these approaches provide fairly reliable measures of investor sentiment, recent technological developments have presented us with new tools which help in measuring investor sentiment in faster and more novel ways. Social platforms for investors and natural language processing algorithms categorizing Tweets are two of such tools. Using a modern approach, the aim of this paper is to analyse how investor sentiment measured by these new instruments can help in predicting subsequent stock returns. After an evaluation of the current state of research on this topic, we describe our big data centric research design and the sentiment and stock data used in this research. The results of the regression analyses confirm the existence of the relationship; on top of that, these relationships are negative for short time lags of one week and one month, but positive for longer lags. In addition, we find positive associations between traditional and modern sentiment measures. Therefore, these new measures provide not only a reliable, but also a faster method of quantifying investor sentiment.
+\end{abstract}
+
+\vspace{70mm}
+\invisiblesection{disclaimer}
+\textit{This paper is written by Linus Kinzel, Andrei Pauliuc and Imrich Valach, who take full responsibility for its contents. We declare that all text is our own work and no other sources have been used except the ones present in the bibliography. RSM is only responsible for supervision of completion of the work but not for its contents.}
+
+\newpage
+{\parskip=0pt
+\tableofcontents
+}
+
+\include{introduction}
+
+\include{critical-evaluation}
+
+\include{critical-synthesis}
+
+\include{research-proposal}
+
+\include{results}
+
+\include{discussion}
+
+\include{acknowledge}
+
+\bibliographystyle{apalike}
+\bibliography{bibliography}
+
+\input{reference}
+
+\begin{landscape}
+\newpage
+\section{Appendix}
+
+\input{tables/appendix}
+
+\include{tables/appendix2}
+
+\end{landscape}
+
+
+\end{document}

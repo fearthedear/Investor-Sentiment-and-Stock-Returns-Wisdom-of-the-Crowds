@@ -1,0 +1,31 @@
+\sbox\tempbox{%
+  \begin{tabular}{crrrrrrr}
+    \multicolumn{2}{c}{\textbf{\$SPY}} & \multicolumn{3}{c}{\textbf{Monthly}} & \multicolumn{3}{c}{\textbf{Weekly}} \\
+    \toprule
+    \multicolumn{2}{c}{Source} & \multicolumn{2}{c}{PsychSignal} & \multicolumn{1}{c}{StockTwits} & \multicolumn{2}{c}{PsychSignal} & \multicolumn{1}{c}{StockTwits} \\
+    \midrule
+    \multicolumn{2}{c}{Database} & \multicolumn{1}{c}{\specialcell{PS:\\ Agg.}} & \multicolumn{1}{c}{\specialcell{PS: \\StockTwits}} & \multicolumn{1}{c}{StockTwits} & \multicolumn{1}{c}{\specialcell{PS: \\Agg.}} & \multicolumn{1}{c}{\specialcell{PS: \\StockTwits}} & \multicolumn{1}{c}{StockTwits} \\
+    \midrule
+    \multirow{5}[0]{*} {\specialcell{Absolute \\ Sentiment}}
+     & Mean  & 0.5991 & 0.5948 & 0.4181 & 0.6009 & 0.5962 & 0.4184 \\
+          & Std dev & 0.0464 & 0.0197 & 0.0623 & 0.0637 & 0.0330 & 0.0922 \\
+          & Min   & 0.4944 & 0.0541 & 0.2701 & 0.3660 & 0.5210 & 0.2161 \\
+          & Max   & 0.7535 & 0.6334 & 0.5199 & 0.8198 & 0.6905 & 0.6540 \\
+          & N     & 3613956 & 1418685 & 204547 & 3613956 & 1418685 & 204547 \\
+    \multirow{5}[0]{*} {\specialcell{Change in \\ Sentiment}} & Mean  & 0.0066 & 0.0026 & 0.0157 & 0.0102 & 0.0025 & 0.4518 \\
+          & Std dev & 0.0949 & 0.0412 & 0.1781 & 0.1449 & 0.0691 & 0.1695 \\
+          & Min   & -0.0204 & -0.0636 & -0.2523 & -0.4484 & -0.2290 & 0.0667 \\
+          & Max   & 0.2610 & 0.0851 & 0.5465 & 0.7017 & 0.1692 & 10,000 \\
+          & N     & 3613956 & 1418685 & 204547 & 3613956 & 1418685 & 204547 \\
+          
+          \bottomrule
+    \end{tabular}%
+}
+\setlength\templen{\wd\tempbox}
+\begin{table}[htbp]
+\centering
+\usebox{\tempbox}\\[3pt]
+\parbox{\the\templen}{\small This table shows the descriptive statistics of investor sentiment data of ETF \$SPY for the studied period. Sentiment data is aggregated both on weeks and months, and the table includes the description of all three datasets.}
+\caption{Descriptive statistics for investor sentiment of \$SPY}%
+\label{tab:spy-descriptives}%
+\end{table}%

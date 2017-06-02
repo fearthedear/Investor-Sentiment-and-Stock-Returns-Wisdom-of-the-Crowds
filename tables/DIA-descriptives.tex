@@ -1,0 +1,30 @@
+\sbox\tempbox{%
+    \begin{tabular}{crrrrrrr}
+    \multicolumn{2}{c}{\textbf{\$DIA}} & \multicolumn{3}{c}{\textbf{Monthly}} & \multicolumn{3}{c}{\textbf{Weekly}} \\
+    \toprule
+    \multicolumn{2}{c}{Source} & \multicolumn{2}{c}{PsychSignal} & \multicolumn{1}{c}{StockTwits} & \multicolumn{2}{c}{PsychSignal} & \multicolumn{1}{c}{StockTwits} \\
+    \midrule
+ 	\multicolumn{2}{c}{Database} & \multicolumn{1}{c}{\specialcell{PS: \\Agg.}} & \multicolumn{1}{c}{\specialcell{PS: \\StockTwits}} & \multicolumn{1}{c}{StockTwits} & \multicolumn{1}{c}{\specialcell{PS: \\Agg.}} & \multicolumn{1}{c}{\specialcell{PS: \\StockTwits}} & \multicolumn{1}{c}{StockTwits} \\
+    \midrule
+    \multirow{5}[1]{*}{\specialcell{Absolute \\sentiment}} & Mean  & 0.6012 & 0.6096 & 0.4377 & 0.6194 & 0.6124 & 0.4518 \\
+          & Std dev & 0.1273 & 0.0531 & 0.1003 & 0.1516 & 0.0802 & 0.1695 \\
+          & Min   & 0.2824 & 0.4943 & 0.2793 & 0.1603 & 0.4268 & 0.0667 \\
+          & Max   & 0.7474 & 0.7233 & 0.6932 & 0.8765 & 0.8718 & 1000 \\
+          & N     & 437618 & 65747 & 5542  & 437618 & 65747 & 5542 \\
+    \multirow{5}[0]{*}{\specialcell{Change in \\sentiment}} & Mean  & 0.0701 & 0.0080 & 0.0322 & 0.0881 & 0.0131 & 0.1638 \\
+          & Std dev & 0.4167 & 0.1246 & 0.3009 & 0.5322 & 0.1690 & 0.7603 \\
+          & Min   & -0.5099 & -0.1923 & -0.3710 & -0.6935 & -0.3615 & -0.7537 \\
+          & Max   & 13977 & 0.3306 & 0.7279 & 30471 & 0.5378 & 52,473 \\
+          & N     & 437618 & 65747 & 5542  & 437618 & 65747 & 5542 \\
+          \bottomrule
+    \end{tabular}%
+}
+\setlength\templen{\wd\tempbox}
+\begin{table}[htbp]
+\centering
+\usebox{\tempbox}\\[3pt]
+\parbox{\the\templen}{\small This table shows the descriptive statistics of investor sentiment data of ETF \$DIA for the studied period. Sentiment data is aggregated both on weeks and months, and the table includes description of all three datasets.}
+\caption{Descriptive statistics for investor sentiment of \$DIA}
+\label{tab:dia-descriptives}%
+\end{table}%
+
